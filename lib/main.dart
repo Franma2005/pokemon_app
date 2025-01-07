@@ -19,6 +19,10 @@ class MyApp extends StatelessWidget {
         '/cardpokemon': (BuildContext context) => const CardpokemonScreen(),
         '/homepokemon': (BuildContext context) => const HomepokemonScreen(),
       },
+      onGenerateRoute: (settings) =>
+      MaterialPageRoute(
+        builder: (BuildContext context) => AlertpokemonScreen()
+      )
     );
   }
 }

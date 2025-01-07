@@ -15,8 +15,8 @@ class HomepokemonScreen extends StatelessWidget {
         itemBuilder: (context, index) => 
         ListTile(
           leading: Icon(Icons.catching_pokemon),
-          title: Text('Pokemon de ejeplo'),
-          onTap: () { Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Listview1pokemonScreen())); },
+          title: Text('Pokemon de ejemplo'),
+          onTap: () { Navigator.pushNamed(context, '/pokemonmentira'); },
         ),
         separatorBuilder: (context, index) => Divider(),
         itemCount: 5,
