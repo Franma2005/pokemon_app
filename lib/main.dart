@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pokemon_app/screens/listview1pokemon_screen.dart';
+import 'package:pokemon_app/screens/screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,10 +8,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Material App',
       debugShowCheckedModeBanner: false,
-      home: Listview1pokemonScreen(),
+      initialRoute: '/homepokemon',
+      routes: {
+        '/listpokemon1': (BuildContext context) => const Listview1pokemonScreen(),
+        '/listpokemon2': (BuildContext context) => const Listview2pokemonScreen(),
+        '/alertpokemon': (BuildContext context) => const AlertpokemonScreen(),
+        '/cardpokemon': (BuildContext context) => const CardpokemonScreen(),
+        '/homepokemon': (BuildContext context) => const HomepokemonScreen(),
+      },
     );
   }
 }

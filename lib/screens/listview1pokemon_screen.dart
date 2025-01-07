@@ -1,15 +1,30 @@
 import 'package:flutter/material.dart';
 
 class Listview1pokemonScreen extends StatelessWidget {
+
+  final List<String> options = const['Kanto', 'Alola', 'Paldea', 'Kalo'];
    
   const Listview1pokemonScreen({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text('Regiones Pokemon'))),
-      body: Center(
-         child: Text('Listview1pokemonScreen'),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        title: Center(
+          child: Text('Regiones Pokemon')
+        )
+      ),
+      body: ListView(
+        children: [
+          //Los tres puntos se ponen porque ...options me devuelve un Iterable y hay que desestructurarlo para que flutter lo interprete.
+          ...options.map((regiones) => 
+          ListTile(
+            trailing: Icon(Icons.catching_pokemon),
+            title: Text(regiones)
+          ),)
+        ],
       ),
     );
   }
