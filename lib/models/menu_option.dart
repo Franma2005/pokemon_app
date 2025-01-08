@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MenuOption {
   final String route;
-  final Icons icon;
+  final Icon icon;
   final String nombre;
   final Widget screen;
 

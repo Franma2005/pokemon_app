@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-import 'listview1pokemon_screen.dart';
+import 'package:pokemon_app/router/app_routes.dart';
 
 class HomepokemonScreen extends StatelessWidget {
-   
+  
+  static final AppRoutes appRoutes = AppRoutes();
   const HomepokemonScreen({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
         title: const Center(child: Text('Home Pokemon Screen')),
       ),
       body: ListView.separated(
         itemBuilder: (context, index) => 
         ListTile(
-          leading: Icon(Icons.catching_pokemon),
-          title: Text('Pokemon de ejemplo'),
-          onTap: () { Navigator.pushNamed(context, '/pokemonmentira'); },
+          leading: appRoutes.menuOptions[index].icon,
+          title: Text(appRoutes.menuOptions[index].nombre),
+          onTap: () { Navigator.pushNamed(context, appRoutes.menuOptions[index].route); },
         ),
         separatorBuilder: (context, index) => Divider(),
-        itemCount: 5,
+        itemCount: appRoutes.menuOptions.length,
       )
       );
   }
