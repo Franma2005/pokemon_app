@@ -22,7 +22,12 @@ class MyApp extends StatelessWidget {
         // Personalización de los AppBar de la app
         appBarTheme: AppBarTheme(
           color: Colors.redAccent,
+          foregroundColor: Colors.white,
           elevation: 0,
+        ),
+
+        listTileTheme: ListTileThemeData(
+          iconColor: Colors.redAccent,
         ),
       ),
     );

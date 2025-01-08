@@ -10,7 +10,6 @@ class Listview1pokemonScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        foregroundColor: Colors.white,
         title: Center(
           child: Text('Regiones Pokemon')
         )
