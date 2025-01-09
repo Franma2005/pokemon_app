@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_app/router/app_routes.dart';
+import 'package:pokemon_app/theme/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,20 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: appRoutes.initialRoutes,
       routes: appRoutes.generateRoutes(),
       onGenerateRoute: appRoutes.onGenerateRoute,
-      theme: ThemeData.dark().copyWith(
-        primaryColor: Colors.redAccent,
-
-        // Personalización de los AppBar de la app
-        appBarTheme: AppBarTheme(
-          color: Colors.redAccent,
-          foregroundColor: Colors.white,
-          elevation: 0,
-        ),
-
-        listTileTheme: ListTileThemeData(
-          iconColor: Colors.redAccent,
-        ),
-      ),
+      theme: AppTheme.darkTheme,
     );
   }
 }
