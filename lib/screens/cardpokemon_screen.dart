@@ -17,6 +17,7 @@ class CardpokemonScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         children: const[
           CustomPokemonCardTipo1(),
+          SizedBox(height: 10),
           CustomPokemonCardTipo2(),
         ],
       )
