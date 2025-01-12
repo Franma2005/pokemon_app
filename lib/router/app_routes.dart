@@ -48,7 +48,13 @@ class AppRoutes {
       icon: Icon(icon),
       nombre: 'Animated pokemon',
       screen: AnimatedpokemonScreen()
-    )
+    ),
+    MenuOption(
+      route: '/inputpokemon',
+      icon: Icon(icon),
+      nombre: 'Input pokemon',
+      screen: InputpokemonScreen()
+    ),
   ];
 
   AppRoutes._singleton();
