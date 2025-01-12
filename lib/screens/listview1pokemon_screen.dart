@@ -4,7 +4,7 @@ class Listview1pokemonScreen extends StatelessWidget {
 
   final List<String> options = const['Kanto', 'Alola', 'Paldea', 'Kalo'];
    
-  const Listview1pokemonScreen({Key? key}) : super(key: key);
+  const Listview1pokemonScreen({super.key});
   
   @override
   Widget build(BuildContext context) {

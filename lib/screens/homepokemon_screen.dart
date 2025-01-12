@@ -4,7 +4,7 @@ import 'package:pokemon_app/router/app_routes.dart';
 class HomepokemonScreen extends StatelessWidget {
   
   static final AppRoutes appRoutes = AppRoutes();
-  const HomepokemonScreen({Key? key}) : super(key: key);
+  const HomepokemonScreen({super.key});
   
   @override
   Widget build(BuildContext context) {

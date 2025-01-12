@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 
 class AlertpokemonScreen extends StatelessWidget {
    
-  const AlertpokemonScreen({Key? key}) : super(key: key);
+  const AlertpokemonScreen({super.key});
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
          child: Text('AlertPokemonScreen'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: () => Navigator.pop(context)
       ),
     );
   }

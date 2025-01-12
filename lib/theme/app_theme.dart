@@ -21,5 +21,8 @@ class AppTheme {
         foregroundColor: primaryColor,
       )
     ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primaryColor,
+    ),
   );
 }
