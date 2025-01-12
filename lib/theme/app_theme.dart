@@ -23,6 +23,18 @@ class AppTheme {
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: primaryColor,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10000),
+      )
     ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: primaryColor,
+        foregroundColor: titlesColor,
+        shape: StadiumBorder(),
+        padding: EdgeInsets.all(20),
+        elevation: 0
+      )
+    )
   );
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/widgets/widgets.dart';
 
 class AlertpokemonScreen extends StatelessWidget {
    
@@ -8,7 +9,7 @@ class AlertpokemonScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-         child: Text('AlertPokemonScreen'),
+         child: CustomPokemonElevatedButton(),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.close),
@@ -17,3 +18,4 @@ class AlertpokemonScreen extends StatelessWidget {
     );
   }
 }
+
