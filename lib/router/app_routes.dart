@@ -37,6 +37,12 @@ class AppRoutes {
       nombre: 'Home pokemon',
       screen: HomepokemonScreen()
     ),
+    MenuOption(
+      route: '/avatarpokemon',
+      icon: Icon(icon),
+      nombre: 'Avatar pokemon',
+      screen: AvatarPokemonScreen()
+    )
   ];
 
   AppRoutes._singleton();
