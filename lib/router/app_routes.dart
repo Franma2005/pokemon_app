@@ -42,6 +42,12 @@ class AppRoutes {
       icon: Icon(icon),
       nombre: 'Avatar pokemon',
       screen: AvatarPokemonScreen()
+    ),
+    MenuOption(
+      route: '/animatedpokemon',
+      icon: Icon(icon),
+      nombre: 'Animated pokemon',
+      screen: AnimatedpokemonScreen()
     )
   ];
 
