@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/widgets/widgets.dart';
 
 class InputpokemonScreen extends StatelessWidget {
    
@@ -16,28 +17,36 @@ class InputpokemonScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
           children: [
-            TextFormField(
-              autofocus: true,
-              initialValue: 'Entrenado Pokemon',
-              textCapitalization: TextCapitalization.words,
-              onChanged: (String value) => print(value),
-              validator: (String? value) {
-                if(value!.length < 3) return 'Mínimo 3 caracteres';
-              },
-              decoration: InputDecoration(
-                hintText: 'Nombre de Entrenador Pokemon',
-                labelText: 'Nombre',
-                helperText: 'Solo letras',
-                suffixIcon: Icon(Icons.catching_pokemon_outlined),
-                icon: Icon(Icons.catching_pokemon_rounded),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    topRight: Radius.circular(10)
-                  )
-                )
-              ),
+            CustomPokemonTextFormFile(
+              hintText: 'Entrenador Pokemon',
+              labelText: 'Nombre de Entrenador',
+              helperText: 'Solo letras',
+              suffixIcon: Icons.catching_pokemon_outlined,
+              icon: Icons.catching_pokemon_rounded,
+              obscureText: false,
             ),
+            SizedBox(height: 30),
+            CustomPokemonTextFormFile(
+              hintText: 'Nombre Real',
+              labelText: 'Nombre real del usuario',
+              icon: Icons.email_rounded,
+              obscureText: false,
+            ),
+            SizedBox(height: 30),
+            CustomPokemonTextFormFile(
+              hintText: 'E-mail',
+              labelText: 'E-mail del usuario',
+              icon: Icons.email_rounded,
+              keyboardType: TextInputType.emailAddress,
+              obscureText: false,
+            ),
+            SizedBox(height: 30),
+            CustomPokemonTextFormFile(
+              hintText: 'Contraseña',
+              labelText: 'Contraseña del usuario',
+              icon: Icons.password,
+              obscureText: true,
+            )
           ],
         ),
       )
