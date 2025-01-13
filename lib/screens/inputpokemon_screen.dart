@@ -34,6 +34,8 @@ class InputpokemonScreen extends StatelessWidget {
                 hintText: 'Entrenador Pokemon',
                 labelText: 'Nombre de Entrenador',
                 helperText: 'Solo letras',
+                formProperty: 'entrenador',
+                formTrainerValues: formTrainerValues,
                 suffixIcon: Icons.catching_pokemon_outlined,
                 icon: Icons.catching_pokemon_rounded,
                 obscureText: false,
@@ -42,6 +44,8 @@ class InputpokemonScreen extends StatelessWidget {
               CustomPokemonTextFormFile(
                 hintText: 'Nombre Real',
                 labelText: 'Nombre real del usuario',
+                formProperty: 'nombre',
+                formTrainerValues: formTrainerValues,
                 icon: Icons.email_rounded,
                 obscureText: false,
               ),
@@ -49,6 +53,8 @@ class InputpokemonScreen extends StatelessWidget {
               CustomPokemonTextFormFile(
                 hintText: 'E-mail',
                 labelText: 'E-mail del usuario',
+                formProperty: 'email',
+                formTrainerValues: formTrainerValues,
                 icon: Icons.email_rounded,
                 keyboardType: TextInputType.emailAddress,
                 obscureText: false,
@@ -57,14 +63,29 @@ class InputpokemonScreen extends StatelessWidget {
               CustomPokemonTextFormFile(
                 hintText: 'Contraseña',
                 labelText: 'Contraseña del usuario',
+                formProperty: 'password',
+                formTrainerValues: formTrainerValues,
                 icon: Icons.password,
                 obscureText: true,
               ),
               SizedBox(height: 30),
+              DropdownButtonFormField(
+                items: const[
+                  DropdownMenuItem(value: 'Entrenador', child: Text('entrenador base')),
+                  DropdownMenuItem(value: 'Pokeranger', child: Text('pokeranger')),
+                  DropdownMenuItem(value: 'Líder gimnasio', child: Text('lider gimnasio')),
+                  DropdownMenuItem(value: 'Líder liga pokemon', child: Text('lider liga pokemon')),
+                ],
+                onChanged: ((value) {
+                  print(value ?? '');
+                  formTrainerValues['role'] = value ?? 'entrenador base';
+                })
+              ),
+              SizedBox(height: 30,),
               ElevatedButton(
                 onPressed: () {
                   FocusScope.of(context).requestFocus(FocusNode());
-
+                  print(formTrainerValues);
                   if(!myFormKey.currentState!.validate()) { 
                     print('Formulario no válido');
                     return;

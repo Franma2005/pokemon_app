@@ -10,8 +10,11 @@ class CustomPokemonTextFormFile extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool obscureText;
 
+  final String formProperty;
+  final Map<String, String> formTrainerValues;
+
   const CustomPokemonTextFormFile({
-    super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.keyboardType, required this.obscureText
+    super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.keyboardType, required this.obscureText, required this.formProperty, required this.formTrainerValues
   });
 
   @override
@@ -22,7 +25,7 @@ class CustomPokemonTextFormFile extends StatelessWidget {
       obscureText: obscureText,
       //initialValue: 'Entrenado Pokemon',
       textCapitalization: TextCapitalization.words,
-      onChanged: (String value) => print(value),
+      onChanged: (String value) => formTrainerValues[formProperty] = value,
       validator: (String? value) {
         if(value!.length < 3) return 'Mínimo 3 caracteres';
       },

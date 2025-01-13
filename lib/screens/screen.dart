@@ -6,3 +6,4 @@ export 'listview2pokemon_screen copy.dart';
 export 'avatarpokemon_screen.dart';
 export 'animatedpokemon_screen.dart';
 export 'inputpokemon_screen.dart';
+export 'sliderpokemon_screen.dart';

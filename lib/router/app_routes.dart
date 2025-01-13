@@ -55,6 +55,12 @@ class AppRoutes {
       nombre: 'Input pokemon',
       screen: InputpokemonScreen()
     ),
+    MenuOption(
+      route: '/sliderpokemon',
+      icon: Icon(icon),
+      nombre: 'Slider pokemon',
+      screen: InputpokemonScreen()
+    ),
   ];
 
   AppRoutes._singleton();
