@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AnimatedpokemonScreen extends StatefulWidget {
    
-  const AnimatedpokemonScreen({Key? key}) : super(key: key);
+  const AnimatedpokemonScreen({super.key});
 
   @override
   State<AnimatedpokemonScreen> createState() => _AnimatedpokemonScreenState();
@@ -10,10 +10,10 @@ class AnimatedpokemonScreen extends StatefulWidget {
 
 class _AnimatedpokemonScreenState extends State<AnimatedpokemonScreen> {
 
-  double _width = 50;
-  double _heigth = 50;
-  Color _color = Colors.redAccent;
-  BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
+  final double _width = 50;
+  final double _heigth = 50;
+  final Color _color = Colors.redAccent;
+  final BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
 
   @override
   Widget build(BuildContext context) {

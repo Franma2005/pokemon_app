@@ -28,6 +28,7 @@ class CustomPokemonTextFormFile extends StatelessWidget {
       onChanged: (String value) => formTrainerValues[formProperty] = value,
       validator: (String? value) {
         if(value!.length < 3) return 'Mínimo 3 caracteres';
+        return null;
       },
       decoration: InputDecoration(
         hintText: hintText,

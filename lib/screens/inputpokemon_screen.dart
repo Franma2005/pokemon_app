@@ -3,7 +3,7 @@ import 'package:pokemon_app/widgets/widgets.dart';
 
 class InputpokemonScreen extends StatelessWidget {
    
-  const InputpokemonScreen({Key? key}) : super(key: key);
+  const InputpokemonScreen({super.key});
   
   @override
   Widget build(BuildContext context) {

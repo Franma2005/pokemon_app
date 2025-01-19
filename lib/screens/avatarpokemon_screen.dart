@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AvatarPokemonScreen extends StatelessWidget {
    
-  const AvatarPokemonScreen({Key? key}) : super(key: key);
+  const AvatarPokemonScreen({super.key});
   
   @override
   Widget build(BuildContext context) {

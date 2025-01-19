@@ -59,7 +59,13 @@ class AppRoutes {
       route: '/sliderpokemon',
       icon: Icon(icon),
       nombre: 'Slider pokemon',
-      screen: InputpokemonScreen()
+      screen: SliderpokemonScreen()
+    ),
+    MenuOption(
+      route: '/listviewbuilderpokemon',
+      icon: Icon(icon),
+      nombre: 'List Builder pokemon',
+      screen: ListviewpokemonBuilderScreen()
     ),
   ];
 

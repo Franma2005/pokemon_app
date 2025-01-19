@@ -7,3 +7,4 @@ export 'avatarpokemon_screen.dart';
 export 'animatedpokemon_screen.dart';
 export 'inputpokemon_screen.dart';
 export 'sliderpokemon_screen.dart';
+export 'listviewpokemon_builder_screen.dart';
